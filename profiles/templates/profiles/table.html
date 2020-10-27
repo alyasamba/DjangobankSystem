@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            
+            <a class="navbar-brand" href="{% url 'home' %}">&nbsp;<i class="fa fa-cc-paypal" href="{% url 'home' %}" style="font-size:48px;color:orange"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="{% url 'home' %}" id="nav-home">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:signup' %}" id="nav-create">Create new account</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:signin' %}" id="nav-login">Sign In</a>
+                    <a class="nav-item nav-link disabled" href="{% url 'accounts:error' %}">Sign In With Google</a>
+                    <a class="nav-item nav-link"href="{% url 'accounts:reset' %}">Reset password</a>
+
+                </div>
+            </div>
+        </nav>
+        
+<div class="container-fluid">
+<table id="example" class="display" style="width:100">
+    <h5 class="text-center p-auto bg-primary m-3 p-3">TranSaction History of previously made transactions on site!!</h5>
+
+        <thead>
+            <tr>
+                <th>Transaction ID:</th>
+                <th>Time</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th> date </th>
+                <th>Balance After transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID:111</td>
+                <td>11:20 AM</td>
+                <td>Deposit</td>
+                <td>61k</td>
+                <td>2011/04/25</td>
+                <td>320,800</td>
+            </tr>
+            <tr>
+                <td>ID:112</td>
+                <td>11:20 AM</td>
+                <td>Deposit</td>
+                <td>63k</td>
+                <td>2011/07/25</td>
+                <td>170,750</td>
+            </tr>
+            <tr>
+                <td>ID:113</td>
+                <td>5:05PM</td>
+                <td>Withdrawal</td>
+                <td>66k</td>
+                <td>2009/01/12</td>
+                <td>86,000</td>
+            </tr>
+            <tr>
+                <td>ID:114</td>
+                <td>4:05PM</td>
+                <td>Deposit</td>
+                <td>22k</td>
+                <td>2012/03/29</td>
+                <td>433,060</td>
+            </tr>
+            <tr>
+                <td>ID:115</td>
+                <td>4:01PM</td>
+                <td>Deposit</td>
+                <td>33k</td>
+                <td>2008/11/28</td>
+                <td>162,700</td>
+            </tr>
+            <tr>
+                <td>ID:116</td>
+                <td>2:45PM</td>
+                <td>Withdrawal</td>
+                <td>61k</td>
+                <td>2012/12/02</td>
+                <td>372,000</td>
+            </tr>
+            <tr>
+                <td>ID:117</td>
+                <td>4:21PM</td>
+                <td>Withdrawal</td>
+                <td>59k</td>
+                <td>2012/08/06</td>
+                <td>137,500</td>
+            </tr>
+            <tr>
+                <td>ID:118</td>
+                <td>Integration Specialist</td>
+                <td>Withdrawal</td>
+                <td>55k</td>
+                <td>2010/10/14</td>
+                <td>327,900</td>
+            </tr>
+            <tr>
+                <td>ID:50</td>
+                <td>3:33PM</td>
+                <td>Deposit</td>
+                <td>39k</td>
+                <td>2009/09/15</td>
+                <td>205,500</td>
+            </tr>
+            <tr>
+                <td>ID:40</td>
+                <td>1:00PM</td>
+                <td>Deposit</td>
+                <td>23k</td>
+                <td>2008/12/13</td>
+                <td>103,600</td>
+            </tr>
+            <tr>
+                <td>ID:200</td>
+                <td>9:08 PM</td>
+                <td>Deposit</td>
+                <td>30k</td>
+                <td>2008/12/19</td>
+                <td>90,560</td>
+            </tr>
+            <tr>
+                <td>ID:22</td>
+                <td>12:00PM</td>
+                <td>Deposit</td>
+                <td>22k</td>
+                <td>2013/03/03</td>
+                <td>342,000</td>
+            </tr>
+            <tr>
+                <td>ID:111</td>
+                <td>3:00 PM</td>
+                <td>Deposit</td>
+                <td>36k</td>
+                <td>2008/10/16</td>
+                <td>470,600</td>
+            </tr>
+            <tr>
+                <td>ID:151</td>
+                <td>2:00PM</td>
+                <td>Deposit</td>
+                <td>43k</td>
+                <td>2012/12/18</td>
+                <td>313,500</td>
+            </tr>
+            <tr>
+                <td>ID:152</td>
+                <td>11:34 AM</td>
+                <td>Deposit</td>
+                <td>19k</td>
+                <td>2010/03/17</td>
+                <td>385,750</td>
+            </tr>
+            <tr>
+                <td>ID:153</td>
+                <td>3:00PM</td>
+                <td>Deposit</td>
+                <td>66k</td>
+                <td>2012/11/27</td>
+                <td>198,500</td>
+            </tr>
+            <tr>
+                <td>ID:154</td>
+                <td>1:00PM</td>
+                <td>Deposit</td>
+                <td>64k</td>
+                <td>2010/06/09</td>
+                <td>725,000</td>
+            </tr>
+            <tr>
+                <td>ID:117</td>
+                <td>1:00PM</td>
+                <td>Deposit</td>
+                <td>59k</td>
+                <td>2009/04/10</td>
+                <td>237,500</td>
+            </tr>
+            <tr>
+                <td>ID:119</td>
+                <td>2:05PM</td>
+                <td>Withdrawal</td>
+                <td>41k</td>
+                <td>2012/10/13</td>
+                <td>132,000</td>
+            </tr>
+            <tr>
+                <td>ID:118</td>
+                <td>4:15PM</td>
+                <td>Withdrawal</td>
+                <td>35k</td>
+                <td>2012/09/26</td>
+                <td>17,500</td>
+            </tr>
+            <tr>
+                <td>ID:115</td>
+                <td>4:05PM</td>
+                <td>Withdrawal</td>
+                <td>30k</td>
+                <td>2011/09/03</td>
+                <td>345,000</td>
+            </tr>
+            <tr>
+                <td>ID:113</td>
+                <td>12PM</td>
+                <td>Withdrawal</td>
+                <td>40k</td>
+                <td>2009/06/25</td>
+                <td>75,000</td>
+            </tr>
+            <tr>
+                <td>ID:112</td>
+                <td>12PM</td>
+                <td>Withdrawal</td>
+                <td>21k</td>
+                <td>2011/12/12</td>
+                <td>6,450</td>
+            </tr>
+            <tr>
+                <td>ID:222</td>
+                <td>11:21 AM</td>
+                <td>Withdrawal</td>
+                <td>23k</td>
+                <td>2010/09/20</td>
+                <td>5,600</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Transaction ID:</th>
+                <th>Time</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th> date </th>
+                <th>Balance After transaction</th>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- Footer -->
+<footer class="page-footer font-small bg-warning ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© PaylPaL Ltd.:
+    <a class="p-3" href="{% url 'profiles:account_status' %}">Account Status </a>
+    <a class="p-3" href="{% url 'home' %}"> Home </a>
+    <a href="mailto:bhelenavjyot18@gmail.com">Ask A Query?</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script>
+    	$(document).ready(function() {
+    $('#example').DataTable();
+     } );
+
+        
+    </script>
+</body>
+
+</html>

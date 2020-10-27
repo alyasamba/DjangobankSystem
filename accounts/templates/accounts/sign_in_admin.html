@@ -1,0 +1,52 @@
+{% extends 'base_layout.html' %}
+
+{% block stylecontent %}
+    <style>
+        body {
+            background-color: aliceblue
+        }
+        
+        .foot {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        form{
+            margin: 10px auto;
+        }
+    </style>
+{% endblock %}
+
+
+{% block bodycontent%}
+        
+    <div class="container"> 
+        <form class="form-control" action="/accounts/login/" method="post">
+            {% csrf_token %}
+            <h1 class="text-center">Hello Admin!!!</h1>
+            <h2>Enter login details</h2>
+
+            {{ form }}
+
+            <br>
+
+            <button type="submit" class="btn btn-danger">
+                <i class="fa fa-sign-in"></i>
+                Login
+            </button>
+
+            <br> <br>
+
+        </form>
+    </div>
+        
+{% endblock %}
+
+{% block scriptcontent %}
+    <script>
+        $(".active").removeClass("active");
+        $("#nav-login").addClass("active");
+        $("input").addClass("form-control");
+    </script>
+{% endblock %}

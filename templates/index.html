@@ -1,0 +1,139 @@
+{% extends 'base_layout.html' %}
+
+{% block stylecontent %}
+    <style>
+        h1 {
+            margin-top: 7px;
+            
+            border-radius: 18px;
+        }
+        h4 {
+            font-weight: 400;
+            margin-top: 5px;
+            border-bottom: 4px solid black;
+            padding: 5px;
+
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .blue{
+            color: blue;
+        }
+        .foot {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        .img-fluid{margin-top: 30px;
+              transition: transform 9s;
+             transition-timing-function: linear;           
+        }
+        .new{
+            transform: scale(1.1);
+            opacity: 0.9;            
+        }
+
+    </style>
+{% endblock %}
+        
+
+{% block bodycontent %}    
+    <div class="container text-center">
+        <h1 class="bg-warning">Welcome to PayPaL Bank</h1>
+        <h3 class="text-primary"><em>Cause, You Trust On us !!!</em></h3>
+    </div>
+    <div class="container">
+        <!--
+        <img src="https://media.gettyimages.com/photos/bundles-of-indian-hundred-rupees-picture-id144425633?s=2048x2048" class="img-fluid" alt="Responsive image"> -->
+        <img src="https://media.gettyimages.com/photos/cash-department-window-currency-exchange-picture-id1126878582?s=2048x2048" class="img-fluid" alt="Responsive image">
+        <br><br>
+        <!--
+        <a href="{% url 'accounts:signup' %}"><button class="btn btn-warning btn-block" id="acc"><i class="fa fa-file-text"></i> Create new account</button></a>
+
+
+        <br> 
+        <a href="{% url 'accounts:signin' %}"><button class="btn btn-success btn-block" id="sign_in"><i class="fa fa-sign-in"></i> Sign in</button></a>-->
+               <!-- Footer -->
+
+               <div class="card-deck mt-5">
+                  <div class="card">
+                    <div class="card-body">
+                    <a href="{% url 'accounts:signin' %}"><i class="fa fa-credit-card" style="font-size:100px;color:orange;margin-left: 30%"></i></a>
+                      <h3 class="card-title text-center">Credit Card</h3>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-body">
+                      <a href="{% url 'accounts:signin' %}"><i class="fa fa-mobile" style="font-size:100px;color:skyblue;margin-left:40%"></i></a>
+                      <h3 class="card-title text-center">Money Banking</h3>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-body">
+                      <a href="{% url 'accounts:signin' %}"><i class="fa fa-internet-explorer" style="font-size:100px;color:pink;margin-left: 30%"></i></a>
+                      <h3 class="card-title text-center">Internet Banking</h3>
+                    </div>
+                  </div>
+
+                </div>
+
+
+            <div>
+                <h1 class="display-4 text-center text-primary">History</h1>
+            <blockquote class="blockquote">
+              <p class="text-center">PaypaL was founded on 7th September, 1906 by a group of eminent businessmen from Mumbai. The Bank was underprivate ownership and control till July 1969 when it was nationalised along with 13 other banks.Presently Bank has overseas presence in 18 foreign countries spread over 5 continents – with 52 offices including 4 Subsidiaries, 1 Representative Office and 1 Joint Venture, at key banking and financial centres viz., Tokyo, Singapore, Hong Kong, London, Paris and New York.</p>
+            </blockquote>
+            </div>
+            <h1 class="text-center m-4 text-warning stat">STATISTICS</h1>
+            <h4 class="text-center">The Indian Bank Stats show how people in the past few years have used PayPal way of online banking over the rest</h4>
+            <canvas id="myChart" width="400" height="400"></canvas>
+
+                    <footer class="page-footer font-small bg-danger container mt-3">
+
+                      <!-- Copyright -->
+                      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                        <a href="#">PayPaL</a>
+                      </div>
+                      <!-- Copyright -->
+                    </footer>
+                    <!-- Footer -->
+
+    </div>
+
+    <br>
+           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").addClass("new");
+            });
+          var ctx = document.getElementById('myChart');
+
+          var stars = [18, 20, 20, 20, 22];
+          var frameworks = ['SBI', 'Punjab-National', 'Muthoot', 'Hyper', 'PayPaL'];
+
+          var myChart = new Chart(ctx, {
+                  type: 'doughnut',
+                  data: {
+                      labels: frameworks,
+                      datasets: [{
+                          label: 'Evolution Of PaypaL in past years',
+                          data: stars,
+                        backgroundColor: [
+                       "rgba(50, 168, 147, 0.6)",
+                       "rgba(90, 239, 10, 0.5)",
+                       "rgba(10, 239, 186, 0.5)",
+                       "rgba(239, 166, 10, 0.5)",
+                       "rgba(10, 65, 239, 0.6)"
+                       ]
+                      }]
+                  },
+
+
+});
+    </script>
+{% endblock %}
